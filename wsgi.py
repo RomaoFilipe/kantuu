@@ -4,9 +4,8 @@ import os
 # Define o caminho do projeto
 sys.path.insert(0, '/httpdocs')
 
-# Se estiver a usar um framework como Flask ou Django
-from app import app as application  # para Flask
-# ou
-# from django.core.wsgi import get_wsgi_application
-# os.environ['DJANGO_SETTINGS_MODULE'] = 'seu_projeto.settings'
-# application = get_wsgi_application()
+# Importa a função create_app da app
+from app import create_app
+
+# Cria a aplicação usando a factory function
+application = create_app()
